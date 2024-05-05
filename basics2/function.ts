@@ -24,4 +24,27 @@ function getVal(val: number): number | string {
   return "OK";
 }
 
+// Using Return Type in Arrow Functions
+const getHello = (s: string): string => {
+  return "";
+};
+
+// Typescript is smart enough which can show the type when I comment or uncomment the following code :)
+
+const heroes = ["Ironman", "Superman", "Spiderman"];
+// const heroes=[1,2,3]
+
+heroes.map((hero): string => {
+  return `hero is ${hero}`;
+});
+
+function consoleError(err: string): void {
+  console.log(err);
+}
+
+// Use never type when the function terminates or stops executing
+function handleError(err: string): never {
+  throw new Error(err);
+}
+
 export {};
