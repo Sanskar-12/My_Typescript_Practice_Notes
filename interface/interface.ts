@@ -19,3 +19,5 @@ const user: User = {
     return 10;
   },
 };
+
+export {};
