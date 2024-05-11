@@ -33,13 +33,29 @@
 // user.city="Mumbai"  ---> This will give me error because i am accessing it outside the User class
 // Public keyword in Ts
 // Public keywords can be accessed within the class or outside it
+// class User {
+//   name: string;
+//   email: string;
+//   public city: string = "";
+//   constructor(name: string, email: string) {
+//     this.name = name;
+//     this.email = email;
+//     this.city = this.city; // Public
+//   }
+// }
+// const user = new User("sanskar", "s@g.com");
+// user.city = "Mumbai"; // Public
+// Getter Functions is used to get the private variables outside the class and Setter Functions are used to set the values for private varaibles
 class User {
-    constructor(name, email) {
-        this.city = "";
-        this.name = name;
-        this.email = email;
-        this.city = this.city; // Public
+    constructor(courseId) {
+        this.courseId = courseId;
+    }
+    get getCourseId() {
+        return this.courseId;
+    }
+    set setCourseCount(courseNum) {
+        this.courseId = courseNum;
     }
 }
-const user = new User("sanskar", "s@g.com");
-user.city = "Mumbai"; // Public
+const myObject = new User(3434);
+myObject.getCourseId;

@@ -41,16 +41,36 @@
 
 // Public keyword in Ts
 // Public keywords can be accessed within the class or outside it
+// class User {
+//   name: string;
+//   email: string;
+//   public city: string = "";
+//   constructor(name: string, email: string) {
+//     this.name = name;
+//     this.email = email;
+//     this.city = this.city; // Public
+//   }
+// }
+
+// const user = new User("sanskar", "s@g.com");
+// user.city = "Mumbai"; // Public
+
+// Getter Functions is used to get the private variables outside the class and Setter Functions are used to set the values for private varaibles
+
 class User {
-  name: string;
-  email: string;
-  public city: string = "";
-  constructor(name: string, email: string) {
-    this.name = name;
-    this.email = email;
-    this.city = this.city; // Public
+  private courseId: number;
+  constructor(courseId: number) {
+    this.courseId = courseId;
+  }
+
+  get getCourseId(): number {
+    return this.courseId;
+  }
+
+  set setCourseCount(courseNum: number) {
+    this.courseId = courseNum;
   }
 }
 
-const user = new User("sanskar", "s@g.com");
-user.city = "Mumbai"; // Public
+const myObject = new User(3434);
+myObject.getCourseId;
