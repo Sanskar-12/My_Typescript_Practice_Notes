@@ -1,4 +1,5 @@
 "use strict";
+// Interface with Classes
 class Mobile {
     constructor(burstMode, cameraMode, filter) {
         this.burstMode = burstMode;
