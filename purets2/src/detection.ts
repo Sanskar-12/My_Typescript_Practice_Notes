@@ -17,19 +17,37 @@
 //   return val;
 // };
 
-interface User {
-  name: string;
-  email: string;
+// interface User {
+//   name: string;
+//   email: string;
+// }
+
+// interface Admin {
+//   name: string;
+//   email: string;
+//   isAdmin: boolean;
+// }
+
+// const isAdminAccount = (account: User | Admin) => {
+//   if ("isAdmin" in account) {
+//     return account.isAdmin;
+//   }
+// };
+
+interface Circle {
+  kind: "circle";
+  radius: number;
 }
 
-interface Admin {
-  name: string;
-  email: string;
-  isAdmin: boolean;
+interface Square {
+  kind: "square";
+  side: number;
 }
 
-const isAdminAccount = (account: User | Admin) => {
-  if ("isAdmin" in account) {
-    return account.isAdmin;
+const myShape = (shape: Circle | Square) => {
+  if (shape.kind === "circle") {
+    return Math.PI * shape.radius ** 2;
+  } else {
+    return shape.side * shape.side;
   }
 };
